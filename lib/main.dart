@@ -1,7 +1,8 @@
 import "package:flutter/material.dart";
+import "package:nasa_app/home.dart";
 
 void main() {
-  runApp(main());
+  runApp(const Main());
 }
 
 class Main extends StatefulWidget {
@@ -14,11 +15,17 @@ class Main extends StatefulWidget {
 class _MainState extends State<Main> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("Hello World!"),
+    return MaterialApp(
+      home: const Home(),
+      title: "Meaningless Dedication",
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color.fromRGBO(27, 41, 68, 1),
+          centerTitle: true,
+          titleTextStyle: TextStyle(fontFamily: "Inter", fontSize: 20),
+        ),
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
