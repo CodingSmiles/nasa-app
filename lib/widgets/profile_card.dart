@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
   final String name;
+  final String desc;
 
-  const ProfileCard(this.name, {super.key});
+  const ProfileCard(this.name, this.desc, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +13,7 @@ class ProfileCard extends StatelessWidget {
     final double height = size.height; // get screen height
     final double hpw2 = (height + width) / 200;
     return Padding(
-      padding: const EdgeInsets.fromLTRB(
-        0.0,
-        6,
-        0.0,
-        2,
-      ),
+      padding: EdgeInsets.fromLTRB(8, 3, 8, 3),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(28.0),
@@ -31,8 +27,6 @@ class ProfileCard extends StatelessWidget {
             hpw2 * 2.6,
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.only(
@@ -43,20 +37,32 @@ class ProfileCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CircleAvatar(
-                      radius: hpw2 * 6.5,
+                      radius: hpw2 * 4.5,
                       backgroundColor: Colors.amber,
                     ),
                     Text(
                       name,
                       style: TextStyle(
-                        fontSize: hpw2 * 6,
+                        fontSize: hpw2 * 4.8,
                         fontWeight: FontWeight.bold,
                         fontFamily: "Inter",
                       ),
                     )
                   ],
                 ),
-              )
+              ),
+              SizedBox(
+                height: hpw2 * 3.2,
+              ),
+              Text(
+                desc,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: 'Inter',
+                  fontWeight: FontWeight.normal,
+                  fontSize: hpw2 * 2.5,
+                ),
+              ),
             ],
           ),
         ),

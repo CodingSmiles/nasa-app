@@ -48,7 +48,7 @@ class _SplashState extends State<Splash> {
                 fontFamily: 'Inter',
                 fontWeight: FontWeight.bold,
                 fontSize: hpw2 * 9.24,
-                color: Colors.amber,
+                color: Colors.blueAccent,
               ),
             ),
             Text(
@@ -57,7 +57,7 @@ class _SplashState extends State<Splash> {
                 fontFamily: 'Inter',
                 fontWeight: FontWeight.bold,
                 fontSize: hpw2 * 9.24,
-                color: Colors.white,
+                color: Colors.amber,
               ),
             ),
           ],

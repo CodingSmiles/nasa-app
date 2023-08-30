@@ -10,12 +10,26 @@ class Credits extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Credits"),
       ),
-      body: const Center(
+      body: const SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            ProfileCard("Aadiraj Anil"),
-            ProfileCard("Ayushman Kalita"),
-            ProfileCard("Adarsh Dubey"),
+            ProfileCard(
+              "Aadiraj Anil",
+              "Enthusiastic programmer who likes to work with apps and data",
+            ),
+            ProfileCard(
+              "Ayushman Kalita",
+              "Tech nerd with lots of skills and knowledge about rocket science",
+            ),
+            ProfileCard(
+              "Adarsh Dubey",
+              "Your perfect do-it-all skill set guy who also has humor!",
+            ),
+            ProfileCard(
+              "Mehul Saini",
+              "Creative guy with common sense and tennis skills",
+            ),
           ],
         ),
       ),

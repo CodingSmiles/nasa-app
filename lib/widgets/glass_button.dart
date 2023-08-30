@@ -65,7 +65,7 @@ class GlassButton extends StatelessWidget {
           ),
           child: Center(
             child: Padding(
-              padding: EdgeInsets.all(hpw2 * 3.7),
+              padding: EdgeInsets.all(hpw2 * 2.7),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,7 +75,7 @@ class GlassButton extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: "Inter",
                       color: colorS[1],
-                      fontSize: hpw2 * 3.8,
+                      fontSize: hpw2 * 3.3,
                       fontWeight: FontWeight.w900,
                     ),
                   ),

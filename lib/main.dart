@@ -23,7 +23,7 @@ class _MainState extends State<Main> {
         appBarTheme: const AppBarTheme(
           backgroundColor: Color.fromRGBO(27, 41, 68, 1),
           centerTitle: true,
-          titleTextStyle: TextStyle(fontFamily: "Inter", fontSize: 20),
+          titleTextStyle: TextStyle(fontFamily: "Inter", fontSize: 25),
         ),
       ),
       debugShowCheckedModeBanner: false,

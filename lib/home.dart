@@ -17,9 +17,12 @@ class _HomeState extends State<Home> {
         title: const Text("Meaningless Dedication"),
       ),
       body: const SingleChildScrollView(
-        child: GlassButton(
-          "Credits",
-          Credits(),
+        child: Padding(
+          padding: EdgeInsets.only(left: 12.0, right: 12.0),
+          child: GlassButton(
+            "Credits",
+            Credits(),
+          ),
         ),
       ),
     );
