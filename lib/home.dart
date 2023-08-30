@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:nasa_app/credits.dart";
-import "package:nasa_app/glass_button.dart";
+import 'package:nasa_app/widgets/glass_button.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,7 +17,10 @@ class _HomeState extends State<Home> {
         title: const Text("Meaningless Dedication"),
       ),
       body: const SingleChildScrollView(
-        child: GlassButton("Credits", Credits()),
+        child: GlassButton(
+          "Credits",
+          Credits(),
+        ),
       ),
     );
   }

@@ -1,8 +1,6 @@
+import 'package:flutter/material.dart';
 import 'dart:math';
 
-import 'package:flutter/material.dart';
-
-// create a stateless widget with a build method that returns a card with glassmorphism effect and rounded corners with one title
 class GlassButton extends StatelessWidget {
   List<Color> selectColor() {
     var rng = Random();
@@ -23,7 +21,6 @@ class GlassButton extends StatelessWidget {
         const Color.fromRGBO(255, 181, 50, 0.7),
         const Color.fromRGBO(0, 0, 0, 1)
       ],
-
       [
         const Color.fromRGBO(105, 3, 34, 0.5),
         const Color.fromRGBO(255, 255, 255, 1),
@@ -67,8 +64,7 @@ class GlassButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(28.0),
           ),
           child: Center(
-            child: // custom card with glassmorphism effect and rounded corners with one title
-                Padding(
+            child: Padding(
               padding: EdgeInsets.all(hpw2 * 3.7),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
