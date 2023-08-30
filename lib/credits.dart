@@ -10,27 +10,34 @@ class Credits extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Credits"),
       ),
-      body: const SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            ProfileCard(
-              "Aadiraj Anil",
-              "Enthusiastic programmer who likes to work with apps and data",
-            ),
-            ProfileCard(
-              "Ayushman Kalita",
-              "Tech nerd with lots of skills and knowledge about rocket science",
-            ),
-            ProfileCard(
-              "Adarsh Dubey",
-              "Your perfect do-it-all skill set guy who also has humor!",
-            ),
-            ProfileCard(
-              "Mehul Saini",
-              "Creative guy with common sense and tennis skills",
-            ),
-          ],
+      body: const Padding(
+        padding: EdgeInsets.only(top: 10.0),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              ProfileCard(
+                name: "Aadiraj Anil",
+                desc: "Enthusiastic programmer who likes to work with apps and data",
+                img: AssetImage("images/aadiraj.png"),
+              ),
+              ProfileCard(
+                name: "Ayushman Kalita",
+                desc: "Tech nerd with lots of skills and knowledge about rocket science",
+                img: AssetImage("images/ayushman.jpeg"),
+              ),
+              ProfileCard(
+                name: "Adarsh Dubey",
+                desc: "Your perfect do-it-all skill set guy who also has humor!",
+                img: AssetImage("images/adarsh.jpeg"),
+              ),
+              ProfileCard(
+                name: "Mehul Saini",
+                desc: "Creative guy with common sense and tennis skills",
+                img: AssetImage("images/mehul.jpeg"),
+              ),
+            ],
+          ),
         ),
       ),
     );

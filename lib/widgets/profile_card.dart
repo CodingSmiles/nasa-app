@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
+  const ProfileCard({super.key, required this.name, required this.desc, required this.img,});
+
   final String name;
   final String desc;
-
-  const ProfileCard(this.name, this.desc, {super.key});
+  final ImageProvider img;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class ProfileCard extends StatelessWidget {
     final double height = size.height; // get screen height
     final double hpw2 = (height + width) / 200;
     return Padding(
-      padding: EdgeInsets.fromLTRB(8, 3, 8, 3),
+      padding: const EdgeInsets.fromLTRB(8, 3, 8, 3),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(28.0),
@@ -37,8 +38,8 @@ class ProfileCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CircleAvatar(
-                      radius: hpw2 * 4.5,
-                      backgroundColor: Colors.amber,
+                      radius: hpw2 * 5.5,
+                      backgroundImage: img,
                     ),
                     Text(
                       name,
@@ -59,7 +60,6 @@ class ProfileCard extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Inter',
-                  fontWeight: FontWeight.normal,
                   fontSize: hpw2 * 2.5,
                 ),
               ),
