@@ -12,6 +12,10 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size; // get screen size
+    final double width = size.width; // get screen width
+    final double height = size.height; // get screen height
+    final double hpw2 = (height + width) / 200;
     return Scaffold(
       appBar: AppBar(
         title: const Text("Meaningless Dedication"),
@@ -28,3 +32,5 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+

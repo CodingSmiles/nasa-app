@@ -1,8 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:nasa_app/home.dart';
+import 'package:nasa_app/web_pages/home_web.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -18,11 +18,19 @@ class _SplashState extends State<Splash> {
     Timer(
       const Duration(milliseconds: 2300),
       () {
-        Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (_) => const Home()),
-          (route) => false,
-        );
+        if (kIsWeb) {
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (_) => const HomeWindows()),
+            (route) => false,
+          );
+        } else {
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (_) => const Home()),
+            (route) => false,
+          );
+        }
       },
     );
   }

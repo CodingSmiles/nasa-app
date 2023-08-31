@@ -60,7 +60,7 @@ class ProfileCard extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Inter',
-                  fontSize: hpw2 * 2.5,
+                  fontSize: hpw2 * 2.8,
                 ),
               ),
             ],
