@@ -30,9 +30,9 @@ class GlassButton extends StatelessWidget {
   }
 
   final String text;
-  final Widget m1;
+  final Widget onClickScreen;
 
-  const GlassButton(this.text, this.m1, {super.key});
+  const GlassButton({super.key, required this.text, required this.onClickScreen, });
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class GlassButton extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => m1,
+            builder: (context) => onClickScreen,
           ),
         );
       },

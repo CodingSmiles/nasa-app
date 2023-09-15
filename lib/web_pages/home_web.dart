@@ -20,8 +20,8 @@ class _HomeState extends State<HomeWindows> {
         child: Padding(
           padding: EdgeInsets.only(left: 400.0, right: 400.0),
           child: GlassButton(
-            "Credits",
-            Credits(),
+            text: "Credits",
+            onClickScreen: Credits(),
           ),
         ),
       ),
